@@ -1,1 +1,100 @@
 @import "tailwindcss";
+
+body {
+    font-family: 'Sora', sans-serif;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatBadge {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-5px); }
+}
+
+@keyframes swayLeft {
+    0%, 100% { transform: translateY(-50%) rotate(-3deg) scale(1); }
+    50%       { transform: translateY(-55%) rotate(1.5deg) scale(1.02); }
+}
+
+@keyframes swayRight {
+    0%, 100% { transform: translateY(-50%) rotate(3deg) scale(1); }
+    50%       { transform: translateY(-55%) rotate(-1.5deg) scale(1.02); }
+}
+
+@keyframes swayLeftMobile {
+    0%, 100% { transform: rotate(-3deg) scale(1); }
+    50%       { transform: rotate(1.5deg) scale(1.02); }
+}
+
+@keyframes swayRightMobile {
+    0%, 100% { transform: rotate(3deg) scale(1); }
+    50%       { transform: rotate(-1.5deg) scale(1.02); }
+}
+
+@keyframes bounce-slow {
+    0%, 100% { transform: translateY(0);   opacity: 0.7; }
+    50%       { transform: translateY(6px); opacity: 1; }
+}
+
+@keyframes countPulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+.leaf-left {
+    animation: swayLeftMobile 7s ease-in-out infinite;
+    transform-origin: bottom right;
+}
+
+.leaf-right {
+    animation: swayRightMobile 7s ease-in-out infinite;
+    transform-origin: bottom left;
+}
+
+
+@media (min-width: 640px) {
+    .leaf-left {
+        animation: swayLeft 7s ease-in-out infinite;
+        transform-origin: bottom right;
+    }
+    .leaf-right {
+        animation: swayRight 7s ease-in-out infinite;
+        transform-origin: bottom left;
+    }
+}
+
+
+.scroll-arrow {
+    animation: bounce-slow 2s ease-in-out infinite;
+}
+
+
+.stat-num:hover {
+    animation: countPulse 0.4s ease;
+}
+
+
+.btn-cta {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-cta::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -75%;
+    width: 50%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.35);
+    transform: skewX(-20deg);
+    transition: left 0.5s ease;
+}
+
+.btn-cta:hover::after {
+    left: 125%;
+}

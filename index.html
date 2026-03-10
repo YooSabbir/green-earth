@@ -5,22 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Earth</title>
-    <!-- taiwind and daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- css -->
     <link rel="stylesheet" href="style.css">
-    <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
 </head>
 
-<body>
+<body class="bg-[#E2F6EA]">
 
     <header>
         <nav>
-            <div class="navbar bg-[#15803D] shadow-sm text-white px-4 md:px-20 items-center">
+            <div class="navbar bg-[#15803D] shadow-md text-white px-4 md:px-20 items-center">
                 <div class="navbar-start">
                     <div class="dropdown">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -37,19 +35,23 @@
                             <li><a>Plant a tree</a></li>
                         </ul>
                     </div>
-                    <a class="font-bold text-xl cursor-pointer">Green Earth</a>
+                    <a class="font-bold text-xl cursor-pointer tracking-tight flex items-center gap-2">
+                        <i class="fa-solid fa-leaf text-yellow-300"></i>
+                        Green Earth
+                    </a>
                 </div>
 
                 <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
-                        <li><a>About</a></li>
-                        <li><a>Gallery</a></li>
-                        <li><a>Plant a tree</a></li>
+                    <ul class="menu menu-horizontal px-1 gap-1">
+                        <li><a class="hover:text-yellow-300 transition-colors font-medium">About</a></li>
+                        <li><a class="hover:text-yellow-300 transition-colors font-medium">Gallery</a></li>
+                        <li><a class="hover:text-yellow-300 transition-colors font-medium">Plant a tree</a></li>
                     </ul>
                 </div>
 
                 <div class="navbar-end">
-                    <button class="btn btn-warning rounded-full h-9 min-h-0 shrink-0">
+                    <button
+                        class="btn btn-warning rounded-full h-9 min-h-0 shrink-0 font-bold text-black shadow-lg hover:scale-105 transition-transform">
                         <i class="fa-solid fa-seedling"></i>
                         <span class="hidden sm:inline">Plant a tree</span>
                     </button>
@@ -58,6 +60,110 @@
         </nav>
     </header>
 
+    <section
+        class="relative w-full min-h-[90vh] bg-[#E2F6EA] overflow-hidden flex items-center justify-center py-16 sm:py-20">
+
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div
+                style="width:min(600px,90vw);height:min(600px,90vw);background:radial-gradient(circle,rgba(134,239,172,0.35) 0%,transparent 70%);border-radius:50%;">
+            </div>
+        </div>
+
+        <!-- Left Leaf -->
+        <img src="assets/hero-leaf2.png" alt="leaf-left" class="leaf-left absolute
+                   left-0 bottom-0 top-auto
+                   sm:top-1/2 sm:bottom-auto sm:-translate-y-1/2
+                   w-[110px] sm:w-[220px] md:w-[300px] lg:w-[400px] xl:w-[460px]
+                   opacity-50 sm:opacity-100
+                   pointer-events-none select-none drop-shadow-2xl" />
+
+        <!-- Right Leaf -->
+        <img src="assets/hero-leaf1.png" alt="leaf-right" class="leaf-right absolute
+                   right-0 bottom-0 top-auto
+                   sm:top-1/2 sm:bottom-auto sm:-translate-y-1/2
+                   w-[110px] sm:w-[220px] md:w-[300px] lg:w-[400px] xl:w-[460px]
+                   opacity-50 sm:opacity-100
+                   pointer-events-none select-none drop-shadow-2xl" />
+
+        <!-- ── Main Content ── -->
+        <div class="relative z-10 text-center px-5 sm:px-8 w-full max-w-2xl mx-auto">
+
+            <!-- Badge -->
+            <div class="badge-float inline-flex items-center gap-2 bg-green-100 border border-green-300 text-green-800
+                        text-[11px] sm:text-xs font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-5 sm:mb-6 opacity-0"
+                style="animation: fadeUp 0.7s ease 0.1s forwards, floatBadge 3s ease-in-out 1s infinite;">
+                <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full inline-block"></span>
+                Join the Movement · 200K+ Volunteers
+            </div>
+
+            <!-- Heading -->
+            <h1 class="font-extrabold text-gray-900 leading-[1.1] tracking-tight mb-4 sm:mb-5 opacity-0
+                       text-[2rem] sm:text-4xl md:text-5xl lg:text-[3.75rem]"
+                style="animation: fadeUp 0.9s ease 0.25s forwards;">
+                Plant a Tree,<br>
+                Grow a <span
+                    style="color:#16a34a;text-decoration:underline;text-decoration-color:#bbf7d0;text-underline-offset:6px;">Future</span>
+            </h1>
+
+            <!-- Subtext -->
+            <p class="text-gray-500 leading-relaxed mb-8 sm:mb-10 max-w-md mx-auto opacity-0
+                      text-sm sm:text-base md:text-lg" style="animation: fadeUp 0.9s ease 0.4s forwards;">
+                Join our mission to plant <strong class="text-gray-800 font-semibold">1 million trees</strong> and make
+                the Earth greener for future generations.
+            </p>
+
+            <!-- CTAs -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 opacity-0"
+                style="animation: fadeUp 0.9s ease 0.55s forwards;">
+
+                <button class="btn-cta w-full sm:w-auto bg-yellow-400 hover:bg-yellow-500 active:scale-95
+                               text-black font-bold px-8 sm:px-10 py-3.5 sm:py-4 rounded-full shadow-xl
+                               transition-all duration-300 hover:shadow-yellow-300/50 hover:shadow-2xl
+                               text-sm sm:text-base">
+                    🌿 Get Involved
+                </button>
+
+            </div>
+
+            <!-- Stats -->
+            <div class="mt-10 sm:mt-14 flex items-center justify-center gap-5 sm:gap-8 md:gap-12 opacity-0"
+                style="animation: fadeUp 0.9s ease 0.7s forwards;">
+
+                <div class="text-center">
+                    <p class="stat-num font-extrabold text-gray-900 cursor-default text-xl sm:text-2xl md:text-3xl">1M+
+                    </p>
+                    <p class="text-gray-400 mt-0.5 sm:mt-1 uppercase tracking-widest text-[10px] sm:text-[11px]">Trees
+                        Goal</p>
+                </div>
+
+                <div class="w-px h-8 sm:h-10 bg-green-200"></div>
+
+                <div class="text-center">
+                    <p class="stat-num font-extrabold text-gray-900 cursor-default text-xl sm:text-2xl md:text-3xl">50+
+                    </p>
+                    <p class="text-gray-400 mt-0.5 sm:mt-1 uppercase tracking-widest text-[10px] sm:text-[11px]">
+                        Countries</p>
+                </div>
+
+                <div class="w-px h-8 sm:h-10 bg-green-200"></div>
+
+                <div class="text-center">
+                    <p class="stat-num font-extrabold text-gray-900 cursor-default text-xl sm:text-2xl md:text-3xl">200K
+                    </p>
+                    <p class="text-gray-400 mt-0.5 sm:mt-1 uppercase tracking-widest text-[10px] sm:text-[11px]">
+                        Volunteers</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator — hidden on small screens -->
+        <div class="scroll-arrow hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-1 opacity-0"
+            style="animation: fadeUp 1s ease 1.2s forwards;">
+            <span class="text-[11px] text-gray-400 uppercase tracking-widest">Scroll</span>
+            <i class="fa-solid fa-chevron-down text-green-400 text-sm"></i>
+        </div>
+
+    </section>
 
     <script src="script.js"></script>
 </body>
